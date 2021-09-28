@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS medical_histories (
   id int GENERATED ALWAYS AS IDENTITY,
   admitted_at TIMESTAMP NOT NULL,
   patients_id INT NOT NULL,
+  status VARCHAR(45) NOT NULL,
   PRIMARY KEY (id),
   CONSTRAINT fk_medical_histories_patients
     FOREIGN KEY (patients_id)
